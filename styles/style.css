@@ -1,3 +1,16 @@
 body {
- background-color: blanchedalmond;
+  background-image: url("/images/9193579.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header-text {
+  background-color: aqua;
+  height: 24px;
+}
+
+#scopeImg {
+  background-color: black;
+
 }
