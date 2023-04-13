@@ -59,6 +59,16 @@ body {
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
+  /* width: 550px;
+  height: 50px;
+  background: #F7F7F7;
+  mix-blend-mode: normal;
+  opacity: 0.24;
+  border-radius: 3px; */
+}
+
+.middle-section-placeholder-text {
+  border: none;
   width: 550px;
   height: 50px;
   background: #F7F7F7;
@@ -67,15 +77,9 @@ body {
   border-radius: 3px;
 }
 
-.middle-section-placeholder-text {
-  border: none;
-  
-}
-
 #scopeImg {
   width: 16px;
   height: 16px;
- background-color: black;
 }
 
 .right-section {
@@ -102,5 +106,6 @@ body {
   font-size: 40px;
   font-weight: 700;
   color: #ffff;
+  align-self: center;
 }
 
