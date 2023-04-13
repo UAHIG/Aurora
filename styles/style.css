@@ -3,7 +3,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0px;
-  
+
 }
 
 .top-header {
@@ -54,11 +54,19 @@ body {
  width: 8px;
  height: 12px;
 }
+.container {
+ position: relative;
+}
+
 .gradient {
-  height: 155px;
+  position: absolute;
   background: linear-gradient(180deg, rgba(51, 51, 51, 0.9) 14.31%, rgba(27, 27, 27, 0.469176) 58.6%, rgba(0, 0, 0, 0.0001) 100%);
   mix-blend-mode: normal;
   opacity: 0.24;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .under-header {
@@ -72,10 +80,6 @@ body {
  
 }
 
-.under-header .left-section {
-  mix-blend-mode: normal;
-  opacity: 1;
-}
 
 .middle-section {
   display: flex;
@@ -89,11 +93,13 @@ body {
   mix-blend-mode: normal;
   opacity: 0.24;
   border-radius: 3px;
+  z-index: 100;
 }
 
 .middle-section-placeholder-text {
  border:none;
  outline: none;
+ z-index: 100;
 }
 
 #scopeImg {
@@ -101,6 +107,7 @@ body {
   height: 16px;
   background-color: blue;
   margin-right: 5px;
+  z-index: 100;
 }
 
 .right-section {
@@ -111,6 +118,7 @@ body {
   color: #ffff;
   line-height: 16px;
   letter-spacing: 1px;
+  z-index: 100;
 } 
 
 .sign-and-register {
@@ -132,5 +140,6 @@ body {
   align-self: center;
   line-height: 57px;
   letter-spacing: 0.95px;
+  z-index: 100;
 }
 
