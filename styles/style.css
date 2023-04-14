@@ -71,20 +71,31 @@ body {
 .under-header {
     height: 155px;
     display: flex;
-    align-items: center;
     flex-direction: row;
     justify-content: space-between;
     font-family: 'Poppins', sans-serif;
+    padding-top: 48px;
 }
 
-.nav-block {
+.nav-container {
   display: block;
+  width: 680px;
+
 }
 
 .nav-items {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  color: #ffff;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 1px;
+
 }
 
 .middle-section {
@@ -100,13 +111,17 @@ body {
  border-radius: 3px;
  outline: none;
  z-index: 100;
- padding-left: 10px;
+ padding-left: 16px;
+ padding-right: 16px;
  background-color: rgba(247, 247, 247, 0.24);
  width: 590px;
  height: 50px;
  background-image: url("/images/Fill 1.png");
  background-repeat: no-repeat;
- background-position:right;
+ background-position: center right 16px;
+ margin-bottom: 24px;
+ margin-left: 16px;
+ margin-right: 16px;
 }
 
 #placeholderText::placeholder {
@@ -118,11 +133,6 @@ body {
   line-height: 16px;
   letter-spacing: 0.8px;
   
-}
-
-.holder-text {
-  color: #ffff;
-  z-index: 100;
 }
 
 .right-section {
@@ -139,6 +149,10 @@ body {
   align-self: baseline;
 }
 
+.basket-img-container {
+  margin-top: -6px;
+}
+
 #basket-img {
   align-self:first baseline;
   margin-left: 26px;
@@ -151,9 +165,22 @@ body {
   font-size: 38px;
   font-weight: 700;
   color: #ffff;
-  align-self: center;
   line-height: 57px;
   letter-spacing: 0.95px;
   z-index: 100;
+  margin-left: 24px;
 }
 
+.witamy {
+  width: 80%;
+  margin-top: 10%;
+  font-size: 60px;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  line-height: 90px;
+  font-weight: 700;
+  color: #ffff;
+  position: absolute;
+  left: 60%;
+  transform: translateX(-50%);
+}
