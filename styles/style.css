@@ -6,6 +6,10 @@ body {
 
 }
 
+main {
+  display: flex;
+}
+
 .top-header {
   height: 55px;
   background-color: #ffff;
@@ -172,7 +176,8 @@ body {
 }
 
 .witamy {
-  width: 80%;
+  display: flex;
+  width: 100%;
   margin-top: 10%;
   font-size: 60px;
   font-family: 'Poppins', sans-serif;
@@ -180,7 +185,5 @@ body {
   line-height: 90px;
   font-weight: 700;
   color: #ffff;
-  position: absolute;
-  left: 60%;
-  transform: translateX(-50%);
+  justify-content: center;
 }
