@@ -7,7 +7,7 @@ body {
 }
 
 main {
-  display: flex;
+  display: grid;
 }
 
 .top-header {
@@ -186,4 +186,65 @@ main {
   font-weight: 700;
   color: #ffff;
   justify-content: center;
+}
+
+.register-container {
+display: grid;
+align-items: center;
+justify-content: center;
+width: 100%;
+height: 150px;
+background-color: #ffff;
+}
+
+.register-notation {
+width: 440px;
+height: 36px;
+font-family: 'Poppins', sans-serif;
+font-weight: 400;
+font-size: 12px;
+line-height: 18px;
+letter-spacing: 0.87px;
+}
+
+.register-placeholder-container {
+  width: 440px;
+  height: 36px;
+}
+
+.register-input {
+height: 32px;
+width: 300px;
+border: 1px solid #E1E0E1;
+border-radius: 3px;
+outline: none;
+}
+
+.register-input::placeholder {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 16,5px;
+  letter-spacing: 0.8px;
+  padding-left: 10px;
+}
+
+.register-button {
+width: 94px;
+height: 36px;
+background: #000000;
+border-radius: 3px;
+border: none;
+color: #ffff;
+font-family: 'Poppins', sans-serif;
+font-weight: 600;
+font-size: 10px;
+line-height: 20px;
+letter-spacing: 1px;
+text-transform: uppercase;
+padding-left: 20px;
+padding-right: 20px;
+padding-top: 5px;
+padding-bottom: 5px;
+margin-left: 10px;
 }
