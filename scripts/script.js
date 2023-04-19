@@ -1,5 +1,5 @@
 function cycleBackgroundImages() {
-  const images = ['/images/1.png', '/images/2.png'];
+  const images = ['images/1.png', 'images/2.png'];
   let currentIndex = 0;
 
   setInterval(() => {
@@ -47,11 +47,11 @@ function changeHeaderActive () {
 
   const placeholder = document.querySelector(".middle-section-placeholder-text");
   placeholder.style.backgroundColor = "#F7F7F7";
-  placeholder.style.backgroundImage = 'url("/images/Fill 2.png")';
+  placeholder.style.backgroundImage = 'url("images/Fill 2.png")';
   placeholder.style.transition = "backgroundImage 0.3s ease-in-out";
 
   const basketImg = document.getElementById("basket-img");
-  basketImg.src = "/images/basket2.png";
+  basketImg.src = "images/basket2.png";
   
   const inputElement = document.getElementById('placeholderText'); // получаем элемент input, у которого нужно изменить цвет текста placeholder
   inputElement.style.color = 'black'; // устанавливаем цвет текста input
@@ -82,11 +82,11 @@ function changeHeaderNoActive () {
 
   const placeholder = document.querySelector(".middle-section-placeholder-text");
   placeholder.style.backgroundColor = "rgba(247, 247, 247, 0.24)";
-  placeholder.style.backgroundImage = 'url("/images/Fill 1.png")';
+  placeholder.style.backgroundImage = 'url("images/Fill 1.png")';
   placeholder.style.transition = "backgroundImage 0.9s ease-in-out";
 
   const basketImg = document.getElementById("basket-img");
-  basketImg.src = "/images/basket1.png";
+  basketImg.src = "images/basket1.png";
 
   const inputElement = document.getElementById('placeholderText'); // получаем элемент input, у которого нужно изменить цвет текста placeholder
   inputElement.style.color = 'black'; // устанавливаем цвет текста input
