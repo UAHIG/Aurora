@@ -130,7 +130,8 @@ main {
 }
 
 #placeholderText::placeholder {
-  color: #ffff;
+  color: var(--placeholder-color);
+  /* color: #ffff; */
   opacity: 1;
   font-weight: 500;
   font-family: 'Poppins', sans-serif;
