@@ -4,24 +4,8 @@ body {
   background-color: #ffffff; /* Цвет фона по умолчанию */
 }
 
-
-
-
-
-/* body {
-  height: 100%;
-  background-image: url("../images/1.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
-  margin: 0px;
-
-} */
-
 .wrapper {
   overflow: hidden;
-  /* display: flex; */
-  /* flex-direction: column; */
   min-height: 100%;
   max-width: 100%;
   margin: 0px auto;
@@ -35,26 +19,7 @@ body {
   background-position: top;
   max-width: 3000px;
   margin: 0px auto;
-  /* padding: 0px 15px; */
 } 
-
-
-/* @media (max-width: 790px) {
-  .register-container{
-    width: 115%;
-  }
- } */
-
-
-
-@media (max-width: 420px) {
-  
-}
-
-/* [class="__container"] {
-  max-width: 1440px;
-  margin: 0px auto;
-} */
 
 main {
   display: grid;
@@ -84,7 +49,6 @@ main {
   font-style: normal;
 
 }
-
 
 .right-header-text {
   display: flex;
@@ -160,7 +124,6 @@ main {
   justify-content: space-between;
 }
 
-
 .middle-section-placeholder-text {
  border:none;
  border-radius: 3px;
@@ -169,7 +132,7 @@ main {
  padding-left: 16px;
  padding-right: 16px;
  background-color: rgba(247, 247, 247, 0.24);
- width: 590px;
+ width: 100%;
  height: 50px;
  background-image: url("images/Fill 1.png");
  background-repeat: no-repeat;
@@ -181,7 +144,6 @@ main {
 
 #placeholderText::placeholder {
   color: var(--placeholder-color);
-  /* color: #ffff; */
   opacity: 1;
   font-weight: 500;
   font-family: 'Poppins', sans-serif;
@@ -363,3 +325,44 @@ footer {
   line-height: 13px;
   letter-spacing: 0.5px;
 }
+
+/* ======================================= */
+@media (max-width: 991.98px) {  
+
+.nav-items {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 50%;
+  font-size: 10px;
+  align-items: center;
+  
+}
+.nav-items p {
+  flex: 1 1 33.33%;
+  margin: 0;
+  padding: 0;
+}
+.witamy {
+  font-size: 30px;
+}
+.left-section {
+  font-size: 30px;
+}
+
+.footer-row-one {
+  grid-template-columns: repeat(2, 1fr);
+}
+.footer-container {
+  height: 100%;
+}
+}
+
+
+
+/* All is good for this checkpoint */
+
+@media (max-width: 767.98px) {  }
+/* ------------------------------- */
+
+@media (max-width: 575.98px) {  }
