@@ -325,6 +325,15 @@ footer {
   line-height: 13px;
   letter-spacing: 0.5px;
 }
+.transparent {
+  display: none;
+  /* background-color: red; */
+  width: 100%;
+  height: 450px;
+  
+}
+
+
 
 /* ======================================= */
 @media (max-width: 991.98px) {  
@@ -363,6 +372,45 @@ footer {
 /* All is good for this checkpoint */
 
 @media (max-width: 767.98px) {  }
+@media (max-width: 319.98px) {  }
 /* ------------------------------- */
 
-@media (max-width: 575.98px) {  }
+@media (max-width: 575.98px) {
+  .transparent {
+    display: block;
+  }
+  .top-header {
+    display: none;
+  } 
+  .sign-and-register {
+    display: none;
+  }
+  .witamy {
+    display: none;
+  }
+  .middle-section {
+    display: none;
+  }
+  .nav-items {
+    display: none;
+  }
+  .register-placeholder-container {
+    display: flex;
+    height: 60px;
+    width: 100%;
+  }
+  .register-notation {
+    display: flex;
+    width: 100%; 
+  }
+  .register-input {
+    width: 100%;
+  }
+  .gradient {
+    height: 40%;
+  }
+  .container-after-warper {
+    background-size: auto;
+    background-position-x: -700px;
+  }
+  }

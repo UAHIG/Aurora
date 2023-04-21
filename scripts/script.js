@@ -59,6 +59,8 @@ function changeHeaderActive () {
   inputElement.style.color = 'black'; // устанавливаем цвет текста input
   inputElement.style.setProperty('--placeholder-color', 'black'); // устанавливаем цвет текста placeholder
 
+  // Для мобильных и планшетов сброс на header no Active после клика 
+  setTimeout(changeHeaderNoActive, 2000);
 }
 
 function changeHeaderNoActive () {
