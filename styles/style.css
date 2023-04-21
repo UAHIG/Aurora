@@ -1,4 +1,14 @@
 body {
+  margin: 8px; /* Отступы по умолчанию вокруг body */
+  color: #000000; /* Цвет текста по умолчанию */
+  background-color: #ffffff; /* Цвет фона по умолчанию */
+}
+
+
+
+
+
+/* body {
   height: 100%;
   background-image: url("../images/1.png");
   background-size: cover;
@@ -6,14 +16,39 @@ body {
   background-position: top;
   margin: 0px;
 
-}
+} */
 
 .wrapper {
   overflow: hidden;
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  max-width: 100%;
+  max-width: 90%;
+  margin: 0px auto;
+}
+
+.container-after-warper {
+  height: 100%;
+  background-image: url("../images/1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  max-width: 1800px;
+  margin: 0px auto;
+  /* padding: 0px 15px; */
+} 
+
+
+/* @media (max-width: 790px) {
+  .register-container{
+    width: 115%;
+  }
+ } */
+
+
+
+@media (max-width: 420px) {
+  
 }
 
 /* [class="__container"] {

@@ -2,10 +2,11 @@ function cycleBackgroundImages() {
   const images = ['images/1.png', 'images/2.png'];
   let currentIndex = 0;
   setInterval(() => {
-    document.body.style.backgroundImage = `url(${images[currentIndex]})`;
-    document.body.style.transition = 'background-image 10s ease-in-out';
+    const cont = document.getElementsByClassName("container-after-warper")[0];
+    cont.style.backgroundImage = `url(${images[currentIndex]})`;
+    cont.style.transition = 'background-image 10s ease-in-out';
     setTimeout(() => {
-      document.body.style.transition = '';
+      cont.style.transition = '';
     }, 11000);
     currentIndex = (currentIndex + 1) % images.length;
   }, 12000);
