@@ -5,9 +5,11 @@ function cycleBackgroundImages() {
     const cont = document.getElementsByClassName("container-after-warper")[0];
     cont.style.backgroundImage = `url(${images[currentIndex]})`;
     cont.style.transition = 'background-image 10s ease-in-out';
-    setTimeout(() => {
-      cont.style.transition = '';
-    }, 11000);
+    cont.addEventListener('transitionend', () => {
+      setTimeout(() => {
+        cont.style.transition = '';
+      }, 0);
+    }, { once: true });
     currentIndex = (currentIndex + 1) % images.length;
   }, 12000);
   

@@ -20,10 +20,10 @@ body {
 
 .wrapper {
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column; */
   min-height: 100%;
-  max-width: 90%;
+  max-width: 100%;
   margin: 0px auto;
 }
 
@@ -33,7 +33,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
-  max-width: 1800px;
+  max-width: 3000px;
   margin: 0px auto;
   /* padding: 0px 15px; */
 } 
