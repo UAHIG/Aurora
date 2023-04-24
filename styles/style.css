@@ -4,6 +4,9 @@ body {
   background-color: #ffffff; /* Цвет фона по умолчанию */
 }
 
+.mobile-footer-container {
+  display: none;
+}
 .wrapper {
   overflow: hidden;
   min-height: 100%;
@@ -100,6 +103,14 @@ main {
   display: block;
   width: 680px;
 
+}
+
+.burger-img {
+  display: none;
+}
+
+.scope-white-img {
+  display: none;
 }
 
 .nav-items {
@@ -407,10 +418,79 @@ footer {
     width: 100%;
   }
   .gradient {
-    height: 40%;
+    height: 100%;
   }
   .container-after-warper {
     background-size: auto;
     background-position-x: -700px;
   }
+
+  .burger-img {
+    display: flex;
+    width: 20px;
+    height: 15px;
+    margin-left: 15px;
+    z-index: 100;
+  }
+  
+  .scope-white-img {
+    display: flex;
+    width: 18px;
+    height: 18px;
+    margin-left: 10px;
+    z-index: 100;
+  }
+  .under-header {
+    align-items: center;
+    height: 25px;
+    padding-top: 20px;
+  }
+  .nav-container {
+    width: 0px;
+  }
+  .footer-container {
+    display: none;
+  }
+  .mobile-footer-container {
+  display: none;
+  background-color: #F7F7F7;
+  padding-left: 16px;
+  padding-right: 16px;
+  }
+  .mobile-footer-row-one {
+    
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+  }
+
+  .mobile-footer-heads {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #cecbcb ;
+    padding: 10px;
+   
+    }
+    #chevronImage {
+      /* width: 12px; */
+      z-index: 100;
+    
+    }
+
+    .mobile-about-us-drops {
+      display: none;
+
+    }
+
+  
+
+  
   }

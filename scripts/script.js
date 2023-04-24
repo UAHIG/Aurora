@@ -97,7 +97,47 @@ function changeHeaderNoActive () {
   inputElement.style.setProperty('--placeholder-color', '#ffff'); // устанавливаем цвет текста placeholder
 
 }
+  const burgerImage = document.getElementById('burgerImage');
+  const burgerImageItems = document.getElementById('chevronImage')
+  burgerImage.addEventListener('click', openClose);
+  burgerImageItems.addEventListener('click', openCloseItems);
+  
 
+  function openClose() {
+    const mobileFooterContainer = document.querySelector('.mobile-footer-container');
+    const mobileAboutUsDrops = document.querySelector('.mobile-about-us-drops');
+    const mobileImg = document.getElementById('chevronImage')
+    const mobileFooterHeads = document.querySelector('.mobile-footer-heads');
+ if (mobileFooterContainer.style.display === 'none') {
+  mobileFooterContainer.style.display = 'block'
+ } else {
+  mobileFooterContainer.style.display = 'none'
+  mobileAboutUsDrops.style.display = 'none'
+  mobileFooterHeads.style.borderBottom = '1px solid #cecbcb';
+  mobileImg.style.transform = 'none';
+
+ }
+    
+  };
+
+  function openCloseItems() {
+    const mobileFooterHeads = document.querySelector('.mobile-footer-heads');
+    const mobileAboutUsDrops = document.querySelector('.mobile-about-us-drops');
+    const mobileImg = document.getElementById('chevronImage')
+    if (mobileAboutUsDrops.style.display === 'none') {
+      mobileAboutUsDrops.style.display = 'block';
+      mobileAboutUsDrops.style.borderBottom = '1px solid #cecbcb';
+      mobileFooterHeads.style.borderBottom = 'none';
+      mobileImg.style.transform = 'rotate(90deg)';
+      
+    } else {
+      mobileAboutUsDrops.style.display = 'none'
+      mobileFooterHeads.style.borderBottom = '1px solid #cecbcb';
+      mobileImg.style.transform = 'none';
+    }
+  };
+
+  
 cycleBackgroundImages ();
 
 headerActive ();
