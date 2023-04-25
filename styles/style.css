@@ -479,14 +479,15 @@ footer {
     padding: 10px;
    
     }
-    #chevronImage {
-      /* width: 12px; */
+    .chevron {
+      /* width: 12px;*/
       z-index: 100;
     
     }
 
     .mobile-about-us-drops {
       display: none;
+      padding-left: 15px;
 
     }
 
