@@ -104,10 +104,15 @@ function changeHeaderNoActive () {
   function openClose() {
 
     const mobileFooterContainer = document.querySelector('.mobile-footer-container');
+    const transparentDiv = document.querySelector('.transparent')
     if (mobileFooterContainer.style.display === 'none' || mobileFooterContainer.style.display === 'null') {
   mobileFooterContainer.style.display = 'block'
+  transparentDiv.style.height = '250px'
+
  } else {
   mobileFooterContainer.style.display = 'none'
+  transparentDiv.style.height = '450px'
+
  }
     
   };
