@@ -104,16 +104,10 @@ function changeHeaderNoActive () {
   function openClose() {
 
     const mobileFooterContainer = document.querySelector('.mobile-footer-container');
-    const mobileAboutUsDrops = document.querySelector('.mobile-about-us-drops');
-    const mobileImg = document.getElementById('1')
-    const mobileFooterHeads = document.querySelector('.mobile-footer-heads');
- if (mobileFooterContainer.style.display === 'none') {
+    if (mobileFooterContainer.style.display === 'none' || mobileFooterContainer.style.display === 'null') {
   mobileFooterContainer.style.display = 'block'
  } else {
   mobileFooterContainer.style.display = 'none'
-  mobileAboutUsDrops.style.display = 'none'
-  mobileFooterHeads.style.borderBottom = '1px solid #cecbcb';
-  mobileImg.style.transform = 'none';
  }
     
   };
@@ -143,12 +137,24 @@ function changeHeaderNoActive () {
 }
  
 
+const mediaQuery = window.matchMedia('(min-width: 991.98px)');
+
+// Проверка ширины экрана при загрузке страницы
+if (mediaQuery.matches) {
+  headerActive();
+  headerNoActive();
+}
+
+// Обнаружение изменения ширины экрана и выполнение функции
+mediaQuery.addListener(function(event) {
+  if (event.matches) {
+    headerActive();
+    headerNoActive();
+  }
+});
 
 cycleBackgroundImages ();
 
-headerActive ();
-
-headerNoActive ();
 
 
 
