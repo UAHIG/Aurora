@@ -82,6 +82,13 @@ main {
 
 .container {
   position: relative;
+  background-color: initial;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.container.active {
+  background-color: white;
+  transition: background-color 0.5s ease-in-out;
 }
 
 .gradient {
@@ -93,6 +100,12 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.gradient.active {
+  background: none;
+  transition: background-color 0.5s ease-in-out;
 }
 
 .under-header {
@@ -130,7 +143,12 @@ main {
   font-size: 13px;
   line-height: 20px;
   letter-spacing: 1px;
+  transition: color 0.7s ease-in-out;
+}
 
+.nav-items.active {
+  color: black;
+  transition: color 0.7s ease-in-out;
 }
 
 .middle-section {
@@ -150,12 +168,19 @@ main {
   background-color: rgba(247, 247, 247, 0.24);
   width: 100%;
   height: 50px;
-  background-image: url("images/Fill 1.png");
+  background-image: url("../images/Fill\ 1.png");
   background-repeat: no-repeat;
   background-position: center right 16px;
   margin-bottom: 24px;
   margin-left: 16px;
   margin-right: 16px;
+  transition: backgroundImage 0.9s ease-in-out;
+}
+
+.middle-section-placeholder-text.active {
+  background-color: #F7F7F7;
+  background-image: url("../images/Fill\ 2.png");
+  transition: backgroundImage 0.3s ease-in-out;
 }
 
 #placeholderText::placeholder {
@@ -177,6 +202,12 @@ main {
   line-height: 16px;
   letter-spacing: 1px;
   z-index: 100;
+  transition: color 0.9s ease-in-out;
+}
+
+.right-section.active {
+  color: black;
+  transition: color 0.5s ease-in-out;
 }
 
 .sign-and-register {
@@ -195,6 +226,7 @@ main {
   height: 24px;
 }
 
+
 .left-section {
   font-size: 38px;
   font-weight: 700;
@@ -203,6 +235,12 @@ main {
   letter-spacing: 0.95px;
   z-index: 100;
   margin-left: 24px;
+  transition: color 0.5s ease-in-out;
+}
+
+.left-section.active {
+  color: black;
+  transition: color 0.9s ease-in-out;
 }
 
 .witamy {
