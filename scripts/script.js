@@ -12,8 +12,10 @@ function cycleBackgroundImages() {
     }, { once: true });
     currentIndex = (currentIndex + 1) % images.length;
   }, 12000);
+
   
 }
+cycleBackgroundImages ();
 
 function headerActive () {
   const navElement = document.querySelector("nav");
@@ -60,7 +62,7 @@ function changeHeaderActive () {
   inputElement.style.setProperty('--placeholder-color', 'black'); // устанавливаем цвет текста placeholder
 
   // Для мобильных и планшетов сброс на header no Active после клика 
-  setTimeout(changeHeaderNoActive, 2000);
+  // setTimeout(changeHeaderNoActive, 2000);
 }
 
 function changeHeaderNoActive () {
@@ -107,11 +109,14 @@ function changeHeaderNoActive () {
     const transparentDiv = document.querySelector('.transparent')
     if (mobileFooterContainer.style.display === 'none' || mobileFooterContainer.style.display === 'null') {
   mobileFooterContainer.style.display = 'block'
-  transparentDiv.style.height = '250px'
+  // transparentDiv.style.height = '250px'
+  animateHeight(transparentDiv, 230, 500);
 
  } else {
   mobileFooterContainer.style.display = 'none'
-  transparentDiv.style.height = '450px'
+  // transparentDiv.style.height = '450px'
+  animateHeight(transparentDiv, 450, 500);
+
 
  }
     
@@ -131,11 +136,14 @@ function changeHeaderNoActive () {
   if (mobileAboutUsDrops.style.display === 'none' || mobileAboutUsDrops.style.display === 'null' ) {
           mobileAboutUsDrops.style.display = 'block';
           mobileAboutUsDrops.style.borderBottom = '1px solid #cecbcb';
+          animateHeight(mobileAboutUsDrops, 100, 400);
           mobileFooterHeads.style.borderBottom = 'none';
           mobileImg.style.transform = 'rotate(90deg)';
+          mobileImg.style.transition = 'transform 0.4s ease-in-out';
           
         } else {
-          mobileAboutUsDrops.style.display = 'none'
+          mobileAboutUsDrops.style.display = 'none';
+          animateHeight(mobileAboutUsDrops, 0, 400);
           mobileFooterHeads.style.borderBottom = '1px solid #cecbcb';
           mobileImg.style.transform = 'none';
         }
@@ -158,10 +166,31 @@ mediaQuery.addListener(function(event) {
   }
 });
 
-cycleBackgroundImages ();
 
 
+function animateHeight(element, newHeight, duration) {
+  let startHeight = element.clientHeight;
+  let heightChange = newHeight - startHeight;
+  let startTime = null;
+
+  function heightAnimation(currentTime) {
+    if (!startTime) {
+      startTime = currentTime;
+    }
+    let elapsedTime = currentTime - startTime;
+    let height = startHeight + heightChange * (elapsedTime / duration);
+    element.style.height = height + "px";
+    if (elapsedTime < duration) {
+      requestAnimationFrame(heightAnimation);
+    }
+  }
+
+  requestAnimationFrame(heightAnimation);
+}
+
+// Для вызова этой функции нужно передать три аргумента: элемент <div>, который нужно анимировать, новую высоту и продолжительность анимации в миллисекундах. Например:
 
 
-
+// let myDiv = document.getElementById("myDiv");
+// animateHeight(myDiv, 500, 1000); // изменить высоту myDiv до 500 пикселей за 1 секунду
 

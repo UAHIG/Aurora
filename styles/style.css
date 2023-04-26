@@ -459,6 +459,7 @@ footer {
     height: 15px;
     margin-left: 15px;
     z-index: 100;
+    padding: 5px;
   }
 
   .scope-white-img {
@@ -515,7 +516,9 @@ footer {
 
   .chevron {
     z-index: 100;
-    padding: 7px;
+    padding-left: 15px;
+    padding-right: 7px;
+
   }
 
   .mobile-about-us-drops {
