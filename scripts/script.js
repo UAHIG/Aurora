@@ -133,10 +133,10 @@ function changeHeaderNoActive () {
   const mobileFooterHeads = document.getElementById('mobileFooterHeads'+dropButton)
   const mobileAboutUsDrops = document.getElementById('drops'+dropButton);
   const mobileImg = document.getElementById(dropButton);
-  if (mobileAboutUsDrops.style.display === 'none' || mobileAboutUsDrops.style.display === 'null' ) {
+  if (mobileAboutUsDrops.style.display === 'none' || mobileAboutUsDrops.style.display === '') {
+          animateHeight(mobileAboutUsDrops, 100, 400);
           mobileAboutUsDrops.style.display = 'block';
           mobileAboutUsDrops.style.borderBottom = '1px solid #cecbcb';
-          animateHeight(mobileAboutUsDrops, 100, 400);
           mobileFooterHeads.style.borderBottom = 'none';
           mobileImg.style.transform = 'rotate(90deg)';
           mobileImg.style.transition = 'transform 0.4s ease-in-out';
