@@ -165,13 +165,13 @@ function letsFindSomething() {
     clearInterval(intervalId);
     scope.src = ("images/crosswhite.png");
     scope.classList.add('crossadd');
-    changeImg.style.backgroundImage = ('url("../images/2.png")');
+    changeImg.style.backgroundImage = ('url("images/2.png")');
     animateHeight(transp, 20, 800);
   } else {
     conteinerFinder.classList.remove('findStatus');
     scope.src = ("images/Fill1.png");
     scope.classList.remove('crossadd');
-    changeImg.style.backgroundImage = ('url("../images/1.png")')
+    changeImg.style.backgroundImage = ('url("images/1.png")')
     animateHeight(transp, 450, 600);
     cycleBackgroundImages();
   }
