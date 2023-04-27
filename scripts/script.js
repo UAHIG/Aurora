@@ -87,7 +87,7 @@ burgerImage.addEventListener('click', openClose)
 function openClose() {
   const mobileFooterContainer = document.querySelector('.mobile-footer-container');
   const transparentDiv = document.querySelector('.transparent')
-  if (mobileFooterContainer.style.display === 'none' || mobileFooterContainer.style.display === 'null') {
+  if (mobileFooterContainer.style.display === 'none' || mobileFooterContainer.style.display === '') {
     mobileFooterContainer.style.display = 'block'
     animateHeight(transparentDiv, 230, 500);
   } else {
