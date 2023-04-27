@@ -153,24 +153,24 @@ function animateHeight(element, newHeight, duration) {
 // let myDiv = document.getElementById("myDiv");
 // animateWidth(myDiv, 50, 1000); // изменить ширину myDiv до 50% пикселей за 1 секунду
 
-function animateWidth(element, newWidth, duration) {
-  let startWidth = element.clientWidth;
-  let widthChange = newWidth - startWidth;
-  let startTime = null;
+// function animateWidth(element, newWidth, duration) {
+//   let startWidth = element.clientWidth;
+//   let widthChange = newWidth - startWidth;
+//   let startTime = null;
 
-  function widthAnimation(currentTime) {
-    if (!startTime) {
-      startTime = currentTime;
-    }
-    let elapsedTime = currentTime - startTime;
-    let width = startWidth + widthChange * (elapsedTime / duration);
-    element.style.width = width + "%";
-    if (elapsedTime < duration) {
-      requestAnimationFrame(widthAnimation);
-    }
-  }
-  requestAnimationFrame(widthAnimation);
-}
+//   function widthAnimation(currentTime) {
+//     if (!startTime) {
+//       startTime = currentTime;
+//     }
+//     let elapsedTime = currentTime - startTime;
+//     let width = startWidth + widthChange * (elapsedTime / duration);
+//     element.style.width = width + "%";
+//     if (elapsedTime < duration) {
+//       requestAnimationFrame(widthAnimation);
+//     }
+//   }
+//   requestAnimationFrame(widthAnimation);
+// }
 
 
 // добавляем event на кнопку лупы поиска
@@ -210,11 +210,11 @@ function newAction() {
  const sideBar = document.querySelector('.left-move-container');
  if (sideBar.classList.value === "left-move-container") {
     sideBar.classList.add('active');
-    animateWidth(sideBar, 100, 800);
+    // animateWidth(sideBar, 100, 800);
 
  } else {
     sideBar.classList.remove('active');
-    animateWidth(sideBar, 0, 1000);
+    // animateWidth(sideBar, 0, 1000);
  }
 }
 
