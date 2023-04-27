@@ -16,7 +16,7 @@ function cycleBackgroundImages() {
 
 }
 //просто активируем функцию выше
-cycleBackgroundImages();
+// cycleBackgroundImages();
 
 const mediaQuery = window.matchMedia('(min-width: 991.98px)');
 // Проверка ширины экрана при загрузке страницы
@@ -148,4 +148,32 @@ function animateHeight(element, newHeight, duration) {
 
   requestAnimationFrame(heightAnimation);
 }
+// добавляем event на кнопку лупы поиска
+const scImage = document.getElementById('scopeImage');
+scImage.addEventListener('click', letsFindSomething);
+// открываем закрываем окно поиска меняя стили страницы добавлена анимация пустого div
+function letsFindSomething() {
+  const conteinerFinder = document.querySelector('.mobile-finder-container');
+  const transp = document.querySelector('.transparent')
+  const changeImg = document.querySelector('.container-after-warper')
+  const scope = document.getElementById('scopeImage');
+  if (conteinerFinder.classList.value === 'mobile-finder-container') {
+    conteinerFinder.classList.add('findStatus');
+    // сохраняем возвращаемое значение setInterval в переменную для остановки функции смены изображений после нажатия лупы и открытия окна диалога поиска
+    let intervalId = setInterval(cycleBackgroundImages, 1000);
+    // для остановки выполнения функции вызываем clearInterval
+    clearInterval(intervalId);
+    scope.src = ("images/crosswhite.png");
+    scope.classList.add('crossadd');
+    changeImg.style.backgroundImage = ('url("../images/2.png")');
+    animateHeight(transp, 20, 800);
+  } else {
+    conteinerFinder.classList.remove('findStatus');
+    scope.src = ("images/Fill1.png");
+    scope.classList.remove('crossadd');
+    changeImg.style.backgroundImage = ('url("../images/1.png")')
+    animateHeight(transp, 450, 600);
+    cycleBackgroundImages();
+  }
 
+}
