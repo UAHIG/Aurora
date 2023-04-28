@@ -446,6 +446,7 @@ footer {
     height: 100%;
   }
 
+
 }
 
 
@@ -656,29 +657,33 @@ footer {
 
   }
 
-  .left-move-container {
+  .mobile-left-sidebar {
+    padding-top: 50px;
     position: absolute;
     display: block;
-    background-color: red;
     width: 0%;
     height: 80%;
     animation-name: lefthide;
-    animation-duration: 1s;
+    animation-duration: 0.6s;
     animation-timing-function: ease-out;
-  
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.32) 10%, transparent 0%);
+    background-color: #ffff;
   }
 
-  .left-move-container.active {
+  .mobile-left-sidebar.active {
+    z-index: 110;
     position: absolute;
     display: block;
-    background-color: red;
     width: 100%;
     height: 80%;
-    animation-name: leftgrow;
-    animation-duration: 1s;
+    animation-name: leftgrow; 
+    animation-duration: 0.6s;
     animation-timing-function: ease-out;
-  
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.32) 10%, transparent 0%);
+    background-color: #ffff;
+
   }
+
 
   @keyframes leftgrow {
     from {
@@ -688,6 +693,7 @@ footer {
       width: 100%;
     }
   }
+
   @keyframes lefthide {
     from {
       width: 100%;
@@ -695,5 +701,39 @@ footer {
     to{
       width: 0%;
     }
-
   }
+
+  .mobile-left-sidebar.active > .mobile-left-row {
+    display: block;
+  }
+  .mobile-left-row {
+    display: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+  }
+
+  .mobile-left-heads {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #cecbcb;
+    padding: 10px;
+    padding-right: 55px;
+  }
+  .mobile-left-drops {
+    display: none;
+  padding-left: 10px;
+  }
+
+
+ 
+
+

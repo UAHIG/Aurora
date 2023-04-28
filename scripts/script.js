@@ -147,31 +147,6 @@ function animateHeight(element, newHeight, duration) {
   requestAnimationFrame(heightAnimation);
 }
 
-// функция анимации ширины div для ширин в % !!!!!
-// Для вызова этой функции нужно передать три аргумента: элемент <div>, который нужно анимировать, новую высоту и продолжительность анимации в миллисекундах. 
-// Например:
-// let myDiv = document.getElementById("myDiv");
-// animateWidth(myDiv, 50, 1000); // изменить ширину myDiv до 50% пикселей за 1 секунду
-
-// function animateWidth(element, newWidth, duration) {
-//   let startWidth = element.clientWidth;
-//   let widthChange = newWidth - startWidth;
-//   let startTime = null;
-
-//   function widthAnimation(currentTime) {
-//     if (!startTime) {
-//       startTime = currentTime;
-//     }
-//     let elapsedTime = currentTime - startTime;
-//     let width = startWidth + widthChange * (elapsedTime / duration);
-//     element.style.width = width + "%";
-//     if (elapsedTime < duration) {
-//       requestAnimationFrame(widthAnimation);
-//     }
-//   }
-//   requestAnimationFrame(widthAnimation);
-// }
-
 
 // добавляем event на кнопку лупы поиска
 const scImage = document.getElementById('scopeImage');
@@ -204,17 +179,18 @@ function letsFindSomething() {
 }
 
 const test = document.getElementById('basket-img');
+const test2 = document.querySelector('.mobile-left-sidebar')
 test.addEventListener('click', newAction);
+test2.addEventListener('click', newAction);
+
 
 function newAction() {
- const sideBar = document.querySelector('.left-move-container');
- if (sideBar.classList.value === "left-move-container") {
+ const sideBar = document.querySelector('.mobile-left-sidebar');
+ if (sideBar.classList.value === "mobile-left-sidebar") {
     sideBar.classList.add('active');
-    // animateWidth(sideBar, 100, 800);
 
  } else {
     sideBar.classList.remove('active');
-    // animateWidth(sideBar, 0, 1000);
  }
 }
 
