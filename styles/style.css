@@ -559,7 +559,7 @@ footer {
     display: none;
   }
 
-  .mobile-footer-container {
+  .mobile-footer-container{
     display: none;
     background-color: #F7F7F7;
     padding-left: 16px;
@@ -823,3 +823,5 @@ footer {
   #chevronRighr {
     padding: 5px;
   }
+
+}
