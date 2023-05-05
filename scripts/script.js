@@ -96,20 +96,6 @@ burgerImage.addEventListener('click', openClose)
 //   }
 // };
 
-// function openClose() {
-//   const mobileFooterContainer = document.querySelector('.mobile-footer-container');
-//   const transparentDiv = document.querySelector('.transparent');
-  
-//   if (window.matchMedia('(max-width: 575.98px)').matches) {
-//     if (mobileFooterContainer.style.display === 'none' || mobileFooterContainer.style.display === '') {
-//       mobileFooterContainer.style.display = 'block';
-//       animateHeight(transparentDiv, 230, 500);
-//     } else {
-//       mobileFooterContainer.style.display = 'none';
-//       animateHeight(transparentDiv, 450, 500);
-//     }
-//   }
-// };
 
 function openClose() {
   const mobileFooterContainer = document.querySelector('.mobile-footer-container');
