@@ -84,19 +84,6 @@ function changeHeaderNoActive() {
 const burgerImage = document.getElementById('burgerImage');
 burgerImage.addEventListener('click', openClose)
 
-// function openClose() {
-//   const mobileFooterContainer = document.querySelector('.mobile-footer-container');
-//   const transparentDiv = document.querySelector('.transparent')
-//   if (mobileFooterContainer.style.display === 'none' || mobileFooterContainer.style.display === '') {
-//     mobileFooterContainer.style.display = 'block'
-//     animateHeight(transparentDiv, 230, 500);
-//   } else {
-//     mobileFooterContainer.style.display = 'none'
-//     animateHeight(transparentDiv, 450, 500);
-//   }
-// };
-
-
 function openClose() {
   const mobileFooterContainer = document.querySelector('.mobile-footer-container');
   const transparentDiv = document.querySelector('.transparent');
@@ -121,7 +108,6 @@ window.matchMedia('(max-width: 575.98px)').addListener(function(e) {
     document.querySelector('.mobile-footer-container').style.display = 'none';
   }
 });
-
 
 
 // Проверка на правильность события (нажатие на клавишу с Id =числу) цель - отделение клавиши от всего блока контейнера (у них общий event)

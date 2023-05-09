@@ -559,7 +559,7 @@ footer {
     display: none;
   }
 
-  .mobile-footer-container{
+  .mobile-footer-container {
     display: none;
     background-color: #F7F7F7;
     padding-left: 16px;
@@ -822,6 +822,72 @@ footer {
 
   #chevronRighr {
     padding: 5px;
+  }
+
+  .mobile-left-sidebar.active>.footer-left {
+    background-color: #F7F7F7;
+    border-bottom: solid white 1px;
+    grid-template-columns: 1fr;
+    justify-items: left;
+    position: absolute;
+    bottom: 143px;
+  }
+
+  .mobile-left-sidebar.active>.footer-left2 {
+    background-color: #F7F7F7;
+    border-bottom: solid white 1px;
+    grid-template-columns: 1fr;
+    justify-items: left;
+    position: absolute;
+    bottom: 100px;
+  }
+
+  .mobile-left-sidebar.active>.text {
+    grid-template-columns: 1fr;
+    align-items: end;
+    justify-items: center;
+    border-bottom: solid white 2px;
+    position: absolute;
+    bottom: 50px;
+  }
+
+
+  .text-footer {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px;
+    letter-spacing: 0.5px;
+    color: #000000;
+  }
+
+  .sign-left {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 15px;
+    letter-spacing: 1px;
+    color: #000000;
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+
+  .stores {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px;
+    letter-spacing: 0.5px;
+    color: #000000;
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+
+  #map {
+    margin-right: 10px;
   }
 
 }
