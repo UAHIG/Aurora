@@ -191,11 +191,15 @@ function letsFindSomething() {
   }
 
 }
+// открываем боковую панель при нажатии кнопки корзина и закрываем при нажатии креста
 
-const test = document.getElementById('basket-img');
-const test2 = document.querySelector('.mobile-left-sidebar')
-test.addEventListener('click', newAction);
-test2.addEventListener('click', newAction);
+const basBtn = document.getElementById('basket-img');
+const crossBtn = document.getElementById('mCrossBlack')
+const crossBtn2 = document.getElementById('mCrossBlack2')
+
+basBtn.addEventListener('click', newAction);
+crossBtn.addEventListener('click', close234);
+crossBtn2.addEventListener('click', close234);
 
 
 function newAction() {
@@ -207,4 +211,50 @@ function newAction() {
     sideBar.classList.remove('active');
  }
 }
+
+// закрыть списки всех уровней-возврат на основной экран
+function close234() {
+  const sideBar = document.querySelector('.mobile-left-sidebar');
+  const sideBar2 = document.querySelector('.mobile-left-sidebar2');
+  sideBar2.classList.remove('active');
+  sideBar.classList.remove('active');
+  // стираем список при нажатии кнопки close
+  sidebar.innerHTML = '';
+ }
+
+// открываем список первого уровня при открытой боковой панели кнопкой стрелка
+function newAction2() {
+  const sideBar2 = document.querySelector('.mobile-left-sidebar2');
+  if (sideBar2.classList.value === "mobile-left-sidebar2") {
+     sideBar2.classList.add('active');
+ 
+  } else {
+     sideBar2.classList.remove('active');
+  }
+ }
+
+ // функция создающая div раскрывающегося списка второго уровня слева
+
+const imageEleven = document.getElementById('11');
+const sidebar = document.getElementById('level2');
+
+
+imageEleven.addEventListener('click', () => {
+
+  const innerDiv = document.createElement('div');
+  innerDiv.classList.add('mobile-left-heads');
+  innerDiv.textContent = 'consultation';
+
+  const innerImg = document.createElement('img');
+  innerImg.classList.add('chevron');
+  innerImg.id = '21';
+  innerImg.src = 'images/chevron.png';
+  innerImg.alt = 'chevron';
+
+  innerDiv.appendChild(innerImg);
+  sidebar.appendChild(innerDiv);
+  newAction2();
+});
+
+
 
