@@ -79,27 +79,29 @@ function changeHeaderNoActive() {
   inputElement.style.setProperty('--placeholder-color', '#ffff'); // устанавливаем цвет текста placeholder
 
 }
+// убрано для версии с всплывающим нижним блоком 
 
 // функция открытия burger menu применена анимация по высоте
-const burgerImage = document.getElementById('burgerImage');
-burgerImage.addEventListener('click', openClose)
 
-function openClose() {
-  const mobileFooterContainer = document.querySelector('.mobile-footer-container');
-  const transparentDiv = document.querySelector('.transparent');
+// const burgerImage = document.getElementById('burgerImage');
+// burgerImage.addEventListener('click', openClose)
 
-  if (window.matchMedia('(max-width: 575.98px)').matches) {
-    if (mobileFooterContainer.style.display === 'none' || mobileFooterContainer.style.display === '') {
-      mobileFooterContainer.style.display = 'block';
-      animateHeight(transparentDiv, 230, 500);
-    } else {
-      mobileFooterContainer.style.display = 'none';
-      animateHeight(transparentDiv, 450, 500);
-    }
-  } else {
-    mobileFooterContainer.style.display = 'none';
-  }
-}
+// function openClose() {
+//   const mobileFooterContainer = document.querySelector('.mobile-footer-container');
+//   const transparentDiv = document.querySelector('.transparent');
+
+//   if (window.matchMedia('(max-width: 575.98px)').matches) {
+//     if (mobileFooterContainer.style.display === 'none' || mobileFooterContainer.style.display === '') {
+//       mobileFooterContainer.style.display = 'block';
+//       animateHeight(transparentDiv, 230, 500);
+//     } else {
+//       mobileFooterContainer.style.display = 'none';
+//       animateHeight(transparentDiv, 450, 500);
+//     }
+//   } else {
+//     mobileFooterContainer.style.display = 'none';
+//   }
+// }
 
 // Добавляем listener изменений медиа-запроса
 window.matchMedia('(max-width: 575.98px)').addListener(function (e) {
@@ -192,13 +194,13 @@ function letsFindSomething() {
 
 }
 // открываем боковую панель при нажатии кнопки корзина и закрываем при нажатии креста
-
-const basBtn = document.getElementById('basket-img');
+const burgerImage = document.getElementById('burgerImage');
+// const basBtn = document.getElementById('basket-img');
 const crossBtn = document.getElementById('mCrossBlack')
 const crossBtn2 = document.getElementById('mCrossBlack2')
 const crossBtn3 = document.getElementById('mCrossBlack3')
 
-basBtn.addEventListener('click', newAction);
+burgerImage.addEventListener('click', newAction);
 crossBtn.addEventListener('click', close234);
 crossBtn2.addEventListener('click', close234);
 crossBtn3.addEventListener('click', close234);

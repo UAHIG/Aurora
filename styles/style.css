@@ -568,7 +568,9 @@ footer {
   }
 
   .mobile-footer-container {
-    display: none;
+    /* убрано для версии с всплывающим нижним блоком (включить функцию стр 83) */
+    /* display: none; */ 
+    display: block;
     background-color: #F7F7F7;
     padding-left: 16px;
     padding-right: 16px;
