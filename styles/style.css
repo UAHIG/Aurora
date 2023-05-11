@@ -969,6 +969,12 @@ footer {
   #chevronRighr {
     padding: 5px;
   }
+  #chevronRighr2 {
+    padding: 5px;
+  }
+  #chevronRighr3 {
+    padding: 5px;
+  }
 
   .mobile-left-sidebar.active>.footer-left {
     background-color: #F7F7F7;

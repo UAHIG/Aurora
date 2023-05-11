@@ -236,8 +236,8 @@ function close234() {
 const mLeftTwo = document.querySelector('.mobile-left-sidebar');
 
 mLeftTwo.onclick = function (event) {
-  let btnTwo = event.srcElement.id;
-  if (!isNaN(btnTwo)) {
+  let btnTwo = event.srcElement.id || null;
+  if ((!isNaN(btnTwo) && btnTwo !== null)) {
     createLayer(btnTwo);
   }
 };
@@ -246,8 +246,8 @@ mLeftTwo.onclick = function (event) {
 const mLeftThree = document.querySelector('.mobile-left-sidebar2');
 
 mLeftThree.onclick = function (event) {
-  let btnThree = event.srcElement.id;
-  if (!isNaN(btnThree)) {
+  let btnThree = event.srcElement.id || null;
+  if ((!isNaN(btnThree) && btnThree !== null)) {
     createLayer3(btnThree);
   }
 };
@@ -324,3 +324,14 @@ function newAction3() {
     sideBar3.classList.remove('active');
   }
 }
+
+// функция возврата при нажатии стрелки назад 
+
+const goBackBtn2 = document.getElementById('chevronRighr2')
+const goBackBtn3 = document.getElementById('chevronRighr3')
+
+goBackBtn2.addEventListener('click', close234);
+goBackBtn3.addEventListener('click', close234);
+
+
+
