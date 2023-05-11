@@ -101,8 +101,8 @@ function openClose() {
   }
 }
 
-// Добавляем слушатель изменений медиа-запроса
-window.matchMedia('(max-width: 575.98px)').addListener(function(e) {
+// Добавляем listener изменений медиа-запроса
+window.matchMedia('(max-width: 575.98px)').addListener(function (e) {
   if (e.matches) {
     // Если медиа-запрос сработал, то скрываем .mobile-footer-container
     document.querySelector('.mobile-footer-container').style.display = 'none';
@@ -196,65 +196,131 @@ function letsFindSomething() {
 const basBtn = document.getElementById('basket-img');
 const crossBtn = document.getElementById('mCrossBlack')
 const crossBtn2 = document.getElementById('mCrossBlack2')
+const crossBtn3 = document.getElementById('mCrossBlack3')
 
 basBtn.addEventListener('click', newAction);
 crossBtn.addEventListener('click', close234);
 crossBtn2.addEventListener('click', close234);
+crossBtn3.addEventListener('click', close234);
 
 
 function newAction() {
- const sideBar = document.querySelector('.mobile-left-sidebar');
- if (sideBar.classList.value === "mobile-left-sidebar") {
+  const sideBar = document.querySelector('.mobile-left-sidebar');
+  if (sideBar.classList.value === "mobile-left-sidebar") {
     sideBar.classList.add('active');
 
- } else {
+  } else {
     sideBar.classList.remove('active');
- }
+  }
 }
 
 // закрыть списки всех уровней-возврат на основной экран
 function close234() {
   const sideBar = document.querySelector('.mobile-left-sidebar');
   const sideBar2 = document.querySelector('.mobile-left-sidebar2');
+  const sideBar3 = document.querySelector('.mobile-left-sidebar3');
+
+  const listItemsBar = document.getElementById('lev2');
+  const listItemsBar3 = document.getElementById('lev3');
+
+  sideBar3.classList.remove('active');
   sideBar2.classList.remove('active');
   sideBar.classList.remove('active');
   // стираем список при нажатии кнопки close
-  sidebar.innerHTML = '';
- }
+  listItemsBar.innerHTML = '';
+  listItemsBar3.innerHTML = '';
 
-// открываем список первого уровня при открытой боковой панели кнопкой стрелка
+}
+
+// находим ID нажатой кнопки списка left и запускаем функцию построения списка передавая как аргумент id конкретной кнопки
+const mLeftTwo = document.querySelector('.mobile-left-sidebar');
+
+mLeftTwo.onclick = function (event) {
+  let btnTwo = event.srcElement.id;
+  if (!isNaN(btnTwo)) {
+    createLayer(btnTwo);
+  }
+};
+
+// находим ID нажатой кнопки списка следующего уровня left и запускаем функцию построения списка передавая как аргумент id конкретной кнопки
+const mLeftThree = document.querySelector('.mobile-left-sidebar2');
+
+mLeftThree.onclick = function (event) {
+  let btnThree = event.srcElement.id;
+  if (!isNaN(btnThree)) {
+    createLayer3(btnThree);
+  }
+};
+
+// создаем панель из нужного списка Li template
+function createLayer(btnTwo) {
+
+  const template = document.getElementById('list' + btnTwo); //выбрали нужный список по id кнопки
+  const listItems = template.content.querySelectorAll('li');
+  const listItemsBar = document.getElementById('lev2');
+
+  for (let i = 0; i < listItems.length; i++) {
+    const innerDiv = document.createElement('div');
+    innerDiv.classList.add('mobile-left-heads');
+    innerDiv.textContent = listItems[i].textContent;
+
+    const innerImg = document.createElement('img');
+    innerImg.classList.add('chevron');
+    innerImg.id = `${btnTwo}${i + 1}`; // ID будет равен "11 1", "11 2", "12 1" и т.д.
+    innerImg.src = 'images/chevron.png';
+    innerImg.alt = 'chevron';
+
+    innerDiv.appendChild(innerImg);
+    listItemsBar.appendChild(innerDiv);
+  }
+
+  newAction2(); //показываем список
+}
+
+// создаем панель из нужного списка Li template
+
+function createLayer3(btnThree) {
+
+  const template = document.getElementById('list' + btnThree); //выбрали нужный список по id кнопки
+  const listItems = template.content.querySelectorAll('li');
+  const listItemsBar = document.getElementById('lev3');
+
+  for (let i = 0; i < listItems.length; i++) {
+    const innerDiv = document.createElement('div');
+    innerDiv.classList.add('mobile-left-heads3');
+    innerDiv.textContent = listItems[i].textContent;
+    // здесь вставка img не нужна -последний слой
+    // const innerImg = document.createElement('img');
+    // innerImg.classList.add('chevron');
+    // innerImg.id = `3${i + 1}`; 
+    // innerImg.src = 'images/chevron.png';
+    // innerImg.alt = 'chevron';
+
+    // innerDiv.appendChild(innerImg);
+    listItemsBar.appendChild(innerDiv);
+  }
+
+  newAction3(); //показываем список
+}
+
+// открываем список уровня при открытой боковой панели кнопкой стрелка
+
 function newAction2() {
   const sideBar2 = document.querySelector('.mobile-left-sidebar2');
   if (sideBar2.classList.value === "mobile-left-sidebar2") {
-     sideBar2.classList.add('active');
- 
+    sideBar2.classList.add('active');
+
   } else {
-     sideBar2.classList.remove('active');
+    sideBar2.classList.remove('active');
   }
- }
+}
 
- // функция создающая div раскрывающегося списка второго уровня слева
+function newAction3() {
+  const sideBar3 = document.querySelector('.mobile-left-sidebar3');
+  if (sideBar3.classList.value === "mobile-left-sidebar3") {
+    sideBar3.classList.add('active');
 
-const imageEleven = document.getElementById('11');
-const sidebar = document.getElementById('level2');
-
-
-imageEleven.addEventListener('click', () => {
-
-  const innerDiv = document.createElement('div');
-  innerDiv.classList.add('mobile-left-heads');
-  innerDiv.textContent = 'consultation';
-
-  const innerImg = document.createElement('img');
-  innerImg.classList.add('chevron');
-  innerImg.id = '21';
-  innerImg.src = 'images/chevron.png';
-  innerImg.alt = 'chevron';
-
-  innerDiv.appendChild(innerImg);
-  sidebar.appendChild(innerDiv);
-  newAction2();
-});
-
-
-
+  } else {
+    sideBar3.classList.remove('active');
+  }
+}
